@@ -1,0 +1,100 @@
+.welcome-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../assets/welcome.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+}
+
+/* Add an overlay to enhance text readability */
+.welcome-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.1)
+  );
+}
+
+.welcome-content {
+  position: relative; /* To appear above the overlay */
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 4rem;
+  border-radius: 24px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.welcome-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text {
+  margin-bottom: 2.5rem;
+}
+
+.welcome-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.get-started-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.get-started-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Add subtle animation to the content */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcome-content {
+  animation: fadeIn 0.8s ease-out forwards;
+} 

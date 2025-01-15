@@ -1,0 +1,58 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin: -20px -20px 0 -20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  background: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0.8));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.nav-links a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.theme-toggle {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+} 
